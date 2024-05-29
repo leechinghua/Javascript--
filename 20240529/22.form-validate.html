@@ -16,19 +16,18 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    
   </head>
 
   <body>
     <div class="container">
       <div class="mb-2">
-        <label for="account" class="form-label"> 帳號 </label>
+        <label for="" class="form-label"> 帳號 </label>
         <input type="text" class="form-control" id="account" />
         <div class="form-text">請輸入4~12個不包含特殊字元的帳號</div>
         <div class="text-danger" id="accountError"></div>
       </div>
       <div class="mb-2">
-        <label for="email" class="form-label"> email </label>
+        <label for="" class="form-label"> email </label>
         <input type="email" class="form-control" />
         <div class="form-text" id="email"></div>
         <div class="text-danger" id="emailError"></div>
@@ -37,15 +36,15 @@
     </div>
 
     <script
-      src="https://code.jquery.com/jquery-3.7.1.js"
-      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
     <script>
       const regAccount = /^[a-zA-Z0-9]{4,16}$/;
       const regEmail = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
 
-      $("send").click(function () {
+      $("#send").click(function () {
         $("#accountError,#emailError").text("");
         let account = $("#account").val();
         let email = $("#email").val();
