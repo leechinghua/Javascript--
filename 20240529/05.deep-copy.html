@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>deep copy</title>
+  </head>
+  <body>
+    <script>
+      let obj1 = {
+        name: "Jack",
+      };
+      // let obj2 = obj1;
+      // console.log(obj1);
+      // console.log(obj2);
+      // obj2.name = "Peter";
+      // console.log(obj2);
+      // console.log(obj1);
+
+      // 將obj1與obj2解綁
+      let obj2 = JSON.stringify(obj1);
+      // console.log(obj2);
+      obj2 = JSON.parse(obj2);
+      // console.log(obj2);
+      obj2.name = "Peter";
+      console.log(obj2);
+      console.log(obj1);
+    </script>
+  </body>
+</html>

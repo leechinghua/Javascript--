@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>map</title>
+  </head>
+  <body>
+    <script>
+      let myMap = new Map();
+      console.log(myMap);
+
+      let initialData = [
+        ["key1", "value1"],
+        ["key2", "value2"],
+      ];
+      let myMapWithInitialData = new Map(initialData);
+      console.log(myMapWithInitialData);
+
+      myMap.set("key1", "value1");
+      myMap.set("key2", "value2");
+      myMap.set("key3", "value3");
+      console.log(myMap);
+      console.log(myMap.get("key1"));
+      console.log(myMap.get("key4"));
+
+      myMap.delete("key1");
+      console.log(myMap);
+      console.log(myMap.has("key1"));
+      console.log(myMap.has("key2"));
+
+      console.log(myMap.size);
+    </script>
+  </body>
+</html>

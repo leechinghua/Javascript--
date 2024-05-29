@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>event phase</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="p-3 bg-warning" id="outer">
+        <div class="p-3 bg-danger" id="inner">
+          <button class="btn btn-primary" id="button">button</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const button = document.querySelector("#button");
+      const inner = document.querySelector("#inner");
+      const outer = document.querySelector("#outer");
+
+      // 第三個參數 true / false 分別代表捕獲/ 冒泡 機制
+      // true 捕獲機制由外往內
+      // false 冒泡機制由外往內
+
+      button.addEventListener(
+        "click",
+        (e) => {
+          console.log("bubbling button click");
+        },
+        false
+      );
+      inner.addEventListener(
+        "click",
+        (e) => {
+          console.log("bubbling inner click");
+        },
+        false
+      );
+      outer.addEventListener(
+        "click",
+        (e) => {
+          console.log("bubbling outer click");
+        },
+        false
+      );
+      button.addEventListener(
+        "click",
+        (e) => {
+          console.log("capturing button click");
+        },
+        true
+      );
+      inner.addEventListener(
+        "click",
+        (e) => {
+          console.log("capturing inner click");
+        },
+        true
+      );
+      outer.addEventListener(
+        "click",
+        (e) => {
+          console.log("capturing outer click");
+        },
+        true
+      );
+    </script>
+  </body>
+</html>

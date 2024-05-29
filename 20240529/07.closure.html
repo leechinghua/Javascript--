@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+  </head>
+  <body>
+    <script>
+      // function counter() {
+      //   var count = 0;
+      //   function innerCounter() {
+      //     return ++count;
+      //   }
+      //   return innerCounter;
+      // }
+
+      function counter(){
+        var count=0;
+        return function(){
+          return ++count;
+        }
+      }
+      let countFunc=counter();
+      console.log(countFunc());
+      console.log(countFunc());
+      console.log(countFunc());
+
+    </script>
+  </body>
+</html>

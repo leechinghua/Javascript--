@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursive</title>
+  </head>
+  <body>
+    <script>
+      function factorial(n) {
+        // Base Case : 如果n為0, 則直接回傳1
+        if (n === 0) {
+          return 1;
+        }
+
+        // 遞迴步驟 : n! = n*(n-1)!
+        console.log(n - 1);
+        return n * factorial(n - 1);
+      }
+      console.log(factorial(5));
+    </script>
+  </body>
+</html>

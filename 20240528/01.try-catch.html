@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>try catch</title>
+  </head>
+  <body>
+    <script>
+      try {
+        const data = JSON.parse('{"name": "John", "age": 30}');
+        // 故意漏掉結束大括號
+        console.log(data);
+      } catch (error) {
+        // console.error("發生錯誤:", error.message)
+        console.error("有一些錯誤發生");
+      } finally {
+        console.log("JSON 解析完畢");
+      }
+    </script>
+  </body>
+</html>

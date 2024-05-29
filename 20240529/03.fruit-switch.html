@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fruit-switch</title>
+  </head>
+  <body>
+    <script>
+      function getFruitPriceBySwitch(fruit) {
+        switch (fruit) {
+          case "蘋果":
+            console.log("蘋果一斤200元");
+            break;
+          case "橘子":
+            console.log("橘子一斤100元");
+            break;
+          case "香蕉":
+            console.log("香蕉一斤80元");
+            break;
+          default:
+            console.log(`不好意思我們沒有賣${fruit}`);
+        }
+      }
+      getFruitPriceBySwitch("蘋果");
+      getFruitPriceBySwitch("西瓜");
+    </script>
+  </body>
+</html>

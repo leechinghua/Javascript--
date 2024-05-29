@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getFruitPriceByMap(fruit) {
+        let fruitPriceMap = new Map([
+          ["橘子", 200],
+          ["蘋果", 100],
+          ["香蕉", 80],
+        ]);
+        let price = fruitPriceMap.get(fruit);
+        let result = price
+          ? `${fruit}一斤${price}元`
+          : `對不起,我們沒有賣${fruit}`;
+        console.log(result);
+      }
+      getFruitPriceByMap("蘋果");
+      getFruitPriceByMap("西瓜");
+    </script>
+  </body>
+</html>

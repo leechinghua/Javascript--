@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map</title>
+  </head>
+  <body>
+    <script>
+      let initialData = [
+        ["key1", "apple"],
+        ["key2", "banana"],
+        ["key3", "peach"],
+        ["key4", "mango"],
+      ];
+      let myMap = new Map(initialData);
+      console.log(myMap);
+
+      console.log("--get key & value--");
+
+      for (let [key, value] of myMap) {
+        console.log(`${key}: ${value}`);
+      }
+
+      console.log("--get key--");
+      for (let key of myMap.keys()) {
+        console.log(key);
+      }
+      console.log("--get value--");
+
+      for (let value of myMap.values()) {
+        console.log(value);
+      }
+
+      console.log("--forEach--");
+      myMap.forEach(function (value, key) {
+        console.log(`${key}: ${value}`);
+      });
+
+      console.log(myMap.size);
+    </script>
+  </body>
+</html>

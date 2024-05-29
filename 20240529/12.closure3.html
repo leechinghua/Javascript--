@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+  </head>
+  <body>
+    <script>
+      function dogHouse(name) {
+        var count = 0;
+        function countDog() {
+          count++;
+          return `${count} ${name}`;
+        }
+        return countDog;
+      }
+
+      var countGolden = dogHouse("Golden");
+      var countPug = dogHouse("Pug");
+
+      console.log(countGolden());
+      console.log(countGolden());
+      console.log(countPug());
+      console.log(countPug());
+      console.log(countGolden());
+    </script>
+  </body>
+</html>

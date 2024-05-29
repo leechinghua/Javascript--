@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>try catch throw</title>
+  </head>
+  <body>
+    <script>
+      function checkAge(age) {
+        try {
+          if (age < 18) {
+            throw new Error("未成年人士無法使用此功能");
+          }
+          console.log("驗證通過");
+        } catch (error) {
+          console.error(error.message);
+        } finally {
+          console.log("年齡檢查結束");
+          console.log("------");
+        }
+      }
+
+      checkAge(20);
+      checkAge(16);
+    </script>
+  </body>
+</html>

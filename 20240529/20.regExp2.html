@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let input = "An apple a day keeps the doctor away.";
+      let input2 = "I like apple";
+      const re1 = /apple/;
+      const re2 = /./;
+      const re3 = /apple./;
+
+      console.log(re1.test(input));
+      console.log(re2.test(input));
+      console.log(re3.test(input));
+      console.log(re3.test(input2));
+    </script>
+  </body>
+</html>

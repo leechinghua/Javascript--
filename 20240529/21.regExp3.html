@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RegExp3</title>
+  </head>
+  <body>
+    <script>
+      console.log("--phone--");
+      const regPhone = /^09\d{8}$/;
+      let phone1 = "0911223332";
+      let phone2 = "0244455553";
+      console.log(regPhone.test(phone1));
+      console.log(regPhone.test(phone2));
+
+      console.log("--id--");
+      const reId = /^[A-Z]{1}[1-2]{1}[0-9]{8}$/;
+      let id1 = "A123456789";
+      let id2 = "A1234567890";
+      console.log(reId.test(id1));
+      console.log(reId.test(id2));
+
+      console.log("--email--");
+      const regEmail = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+
+      let email1 = "test@gmail.com";
+      let email2 = "test@gmail";
+      console.log(regEmail.test(email1));
+      console.log(regEmail.test(email2));
+    </script>
+  </body>
+</html>

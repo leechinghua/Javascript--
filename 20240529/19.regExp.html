@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RegExp</title>
+  </head>
+  <body>
+    <script>
+      const input = "As I was going to Saint Ives going";
+
+      const re1 = /going/;
+      const re2 = new RegExp("/going/");
+      console.log(input.match(re1));
+      console.log(input.search(re1));
+
+      console.log(re1.test(input));
+      console.log(re1.exec(input));
+
+      let output = input.replace(/going/g, "walking");
+      // /g取所有
+      console.log(output);
+    </script>
+  </body>
+</html>

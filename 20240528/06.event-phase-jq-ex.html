@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button type="button" class="btn btn-primary"></button>
+    </div>
+    <script>
+      const body = document.querySelector("body");
+      const toggle = document.querySelector("#toggle");
+      const menu = document.querySelector("#menu");
+
+      body.addEventListener("click", function () {
+        // console.log("body click");
+      });
+      toggle.addEventListener("click", function () {
+        event.stopPropagation();
+        let menuContent = menu.textContent;
+        if (menuContent == "close") {
+          menuContent = "open";
+        } else {
+        }
+      });
+    </script>
+  </body>
+</html>
