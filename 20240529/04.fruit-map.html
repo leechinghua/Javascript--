@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>fruit map</title>
   </head>
   <body>
     <script>
@@ -21,6 +21,20 @@
       }
       getFruitPriceByMap("蘋果");
       getFruitPriceByMap("西瓜");
+
+      function getBLwriter(BL) {
+        let BLArray = new Map([
+          ["魔道祖師", "墨香銅臭"],
+          ["判官", "木蘇里"],
+          ["歲月間", "靜水邊"],
+        ]);
+        let writer = BLArray.get(BL);
+        let result = writer ? `作者是${writer}` : `暫時沒有收錄${BL}`;
+        console.log(result);
+      }
+
+      getBLwriter("魔道祖師");
+      getBLwriter("小蘑菇");
     </script>
   </body>
 </html>
