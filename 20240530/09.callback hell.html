@@ -3,17 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Promise</title>
+    <title>callback hell</title>
   </head>
   <body>
     <script>
-      function doSomething() {
+      function doSomething(callback) {
         callback();
       }
-      function doSomethingElse() {
+      function doSomethingElse(callback) {
         callback();
       }
-      function doSomethingThird() {}
+      function doSomethingThird(callback) {
+        callback();
+      }
+      doSomething(doSomethingElse(doSomethingThird));
 
       doSomething(function (result) {
         doSomethingElse(
