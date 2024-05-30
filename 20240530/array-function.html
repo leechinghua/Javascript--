@@ -35,8 +35,10 @@
       ];
       console.log(people);
       console.log("--forEach--");
-      people.forEach(function (user) {
+      people.forEach(function (user, index, arr) {
+        console.log(index);
         console.log(user);
+        console.log(arr);
       });
     </script>
   </body>
