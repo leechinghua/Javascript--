@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promise then</title>
+  </head>
+  <body>
+    <script>
+      // doSomething()
+      //   .then(function (result) {
+      //     return doSomethingElse(result);
+      //   })
+      //   .then(function (newResult) {
+      //     return doThirdThing(newResult);
+      //   })
+      //   .then(function (finalResult) {
+      //     console.log("Got the final result: " + finalResult);
+      //   })
+      //   .catch(failureCallback);
+
+      // 模擬一個從伺服器獲取資料的函式
+      function fetchData() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("Data fetched");
+            resolve({ data: "Sample Data" });
+          }, 1000);
+        });
+      }
+      // fetchData();
+      // 模擬一個處理資料的函式
+      function processData(data) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("Data processed");
+            resolve(data.data.toUpperCase());
+            // data中有個物件屬性也叫data，
+            // toUpperCase()全部大寫
+          }, 1000);
+        });
+      }
+      // processData(fetchData());
+      // 模擬一個顯示資料的函式
+      function displayData(data) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("Data displayed: " + data);
+            resolve();
+          }, 1000);
+        });
+      }
+
+      fetchData()
+        .then((data) => {
+          return processData(data);
+        })
+        .then((processData) => {
+          return displayData(processData);
+        })
+        .then(() => {
+          console.log("All operations completed");
+        })
+        .catch((error) => {
+          console.error("An error occurred: ", error);
+        });
+
+      // Data fetched
+      // Data processed
+      // Data displayed: SAMPLE DATA
+      // All operations completed
+    </script>
+  </body>
+</html>
