@@ -27,7 +27,7 @@
           age: 1,
         },
         {
-          name: "Jacy",
+          name: "Jack",
           like: "orange",
           gender: "female",
           age: 3,
@@ -53,6 +53,18 @@
       });
       console.log(females);
 
+      console.log("--find--");
+      let findJack = people.find(function (user) {
+        return user.name == "Jack";
+      });
+
+      console.log(findJack);
+
+      let ifFemale = people.find(function (user) {
+        return user.gender == "female";
+      });
+      console.log(ifFemale);
+      // 只會找到第一個
     </script>
   </body>
 </html>
