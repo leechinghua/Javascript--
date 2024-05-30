@@ -135,11 +135,11 @@
       console.log(reduceArr);
 
       const groupByGender = people.reduce((accumulator, currentValue) => {
-        const { gender } = person;
+        const { gender } = currentValue;
         if (accumulator[gender]) {
-          accumulator[gender].push(person);
+          accumulator[gender].push(currentValue);
         } else {
-          accumulator[gender] = [person];
+          accumulator[gender] = [currentValue];
         }
         return accumulator;
       }, {});
