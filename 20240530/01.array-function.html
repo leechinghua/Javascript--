@@ -117,6 +117,13 @@
         return a.age - b.age;
       });
       console.log(people);
+
+      console.log("--reduce--");
+      let sum = number.reduce(function (accumulator, currentValue) {
+        return accumulator + currentValue;
+      });
+      console.log(sum);
+
     </script>
   </body>
 </html>
