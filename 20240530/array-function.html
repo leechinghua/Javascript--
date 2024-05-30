@@ -65,6 +65,38 @@
       });
       console.log(ifFemale);
       // 只會找到第一個
+
+      console.log("--map--");
+      // 建立一個新的陣列
+      let scores = [20, 52, 71, 30, 61];
+      let newScores = scores.map(function (score) {
+        let newScore = Math.round(Math.sqrt(score) * 10);
+        return newScore;
+        // 開根號*10取整數
+        // return score * 2;
+      });
+      console.log(newScores);
+      let newPeople = people.map(function (user) {
+        let newUser = {
+          name: user.name,
+          gender: user.gender,
+        };
+        return newUser;
+      });
+      console.log(newPeople);
+
+      let newPeople2 = people.map(function (user) {
+        // if (user.age >= 18) {
+        //   user.adult = true;
+        // } else {
+        //   user.adult = false;
+        // }
+        // user.adult = false;
+        // if (user.age >= 18) user.adult = true;
+        user.adult = user.age >= 18 ? true : false;
+        return user;
+      });
+      console.log(newPeople2);
     </script>
   </body>
 </html>
