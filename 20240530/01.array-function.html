@@ -133,6 +133,17 @@
         return accumulator.concat(currentValue);
       }, []);
       console.log(reduceArr);
+
+      const groupByGender = people.reduce((accumulator, currentValue) => {
+        const { gender } = person;
+        if (accumulator[gender]) {
+          accumulator[gender].push(person);
+        } else {
+          accumulator[gender] = [person];
+        }
+        return accumulator;
+      }, {});
+      console.log(groupByGender);
     </script>
   </body>
 </html>
