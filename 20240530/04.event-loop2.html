@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("首先");
+
+      // 只要有非同步就會等其他執行
+      // 放入Queue等Stack執行完
+      setTimeout(function () {
+        console.log("其次");
+      }, 0);
+      console.log("最後");
+    </script>
+  </body>
+</html>
