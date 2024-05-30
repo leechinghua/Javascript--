@@ -41,6 +41,18 @@
         // console.log(arr);
         console.log(`${user.name} likes ${user.like}`);
       });
+
+      console.log("--filter--");
+      let peopleAdult = people.filter(function (user) {
+        return user.age >= 18;
+      });
+      console.log(peopleAdult);
+
+      let females = people.filter(function (user) {
+        return user.gender == "female";
+      });
+      console.log(females);
+
     </script>
   </body>
 </html>
