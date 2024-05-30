@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event-loop</title>
+  </head>
+  <body>
+    <script>
+      console.log(1);
+      setTimeout(function () {
+        console.log(2);
+      }, 0);
+      Promise.resolve()
+        .then(function () {
+          console.log(3);
+        })
+        .then(function () {
+          console.log(4);
+        });
+    </script>
+  </body>
+</html>
