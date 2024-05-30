@@ -124,6 +124,15 @@
       });
       console.log(sum);
 
+      const arr = [
+        ["a", "b"],
+        ["c", "d"],
+        ["e", "f"],
+      ];
+      let reduceArr = arr.reduce(function (accumulator, currentValue) {
+        return accumulator.concat(currentValue);
+      }, []);
+      console.log(reduceArr);
     </script>
   </body>
 </html>
