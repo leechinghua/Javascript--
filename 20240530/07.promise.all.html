@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const myName1 = function () {
+        return new Promise(function (resolve, reject) {
+          setTimeout(() => {
+            resolve("JSON1");
+          }, 300);
+        });
+      };
+
+      const myName2 = function () {
+        return new Promise(function (resolve, reject) {
+          setTimeout(() => {
+            resolve("JSON2");
+          }, 300);
+        });
+      };
+
+      // myName1()
+      // .then((res) => console.log("成功：" + res));
+
+      // myName2()
+      // .then((res) => console.log("成功：" + res));
+
+      Promise.all([myName1(), myName2()]).then((res) => {
+        console.log(res);
+      });
+    </script>
+  </body>
+</html>
