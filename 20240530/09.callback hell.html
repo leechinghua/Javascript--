@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <script>
+      function doSomething() {
+        callback();
+      }
+      function doSomethingElse() {
+        callback();
+      }
+      function doSomethingThird() {}
+
+      doSomething(function (result) {
+        doSomethingElse(
+          result,
+          function (newResult) {
+            doThirdThing(
+              newResult,
+              function (finalResult) {
+                console.log("Got the final result: " + finalResult);
+              },
+              failureCallback
+            );
+          },
+          failureCallback
+        );
+      }, failureCallback);
+    </script>
+  </body>
+</html>
