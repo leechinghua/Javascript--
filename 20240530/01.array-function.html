@@ -97,6 +97,26 @@
         return user;
       });
       console.log(newPeople2);
+
+      console.log("--sort--");
+      const number = [5, 9, 1, 3, 2, 6];
+      // number.sort();
+      // console.log(number);
+      // 升冪
+      number.sort(function (a, b) {
+        return a - b;
+      });
+      console.log(number);
+      // 降冪
+      number.sort(function (a, b) {
+        return b - a;
+      });
+      console.log(number);
+
+      people.sort(function (a, b) {
+        return a.age - b.age;
+      });
+      console.log(people);
     </script>
   </body>
 </html>
