@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Function</title>
+  </head>
+  <body>
+    <script>
+      let people = [
+        {
+          name: "Jay",
+          like: "apple",
+          gender: "male",
+          age: 18,
+        },
+        {
+          name: "Sarah",
+          like: "banana",
+          gender: "female",
+          age: 24,
+        },
+        {
+          name: "Tom",
+          like: "orange",
+          gender: "male",
+          age: 1,
+        },
+        {
+          name: "Jacy",
+          like: "orange",
+          gender: "female",
+          age: 3,
+        },
+      ];
+      console.log(people);
+      console.log("--forEach--");
+      people.forEach(function (user) {
+        console.log(user);
+      });
+    </script>
+  </body>
+</html>
