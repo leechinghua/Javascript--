@@ -55,14 +55,21 @@
             });
         });
       }
-      function handleWeatherData(data) {
+      function handleWeatherData(data, locationName) {
         return new Promise((resolve, reject) => {
-          resolve(data);
+          let locationData = data.find((location) => {
+            return location.locationName == locationName;
+          });
+          if (locationData) {
+            resolve(locationData);
+          } else {
+            reject(`Location data for ${locationName} not found`);
+          }
         });
       }
       fetchWeatherDate()
         .then((data) => {
-          return handleWeatherData(data);
+          return handleWeatherData(data, "臺南市");
         })
         .then((data) => {
           console.log(data);
