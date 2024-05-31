@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>oop-extends</title>
+  </head>
+  <body>
+    <script>
+      class Vehicle {
+        constructor(brand) {
+          this.brand = brand;
+        }
+
+        beep() {
+          console.log("Beeping!");
+        }
+      }
+      // Car 繼承 Vehicle
+      class Car extends Vehicle {
+        constructor(brand, model) {
+          super(brand);
+          this.model = model;
+        }
+
+        start() {
+          console.log("Engine starts!");
+        }
+      }
+
+      const car = new Car("Ford", "Mustang");
+
+      car.beep();
+      car.start();
+    </script>
+  </body>
+</html>
