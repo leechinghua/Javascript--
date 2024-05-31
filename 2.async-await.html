@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>async await</title>
+  </head>
+  <body>
+    <script>
+      const logAsync = (message, time) => {
+        return new Promise((resolve, reject) => {
+          if (message && time) {
+            setTimeout(() => {
+              console.log(message);
+              resolve();
+            }, time);
+          } else {
+            reject();
+          }
+        });
+      };
+
+      // logAsync("這個訊息會在1秒之後出現", 1000).then(() => {
+      //   return logAsync("這個訊息會在2秒之後出現", 2000);
+      // });
+
+      const demo = async () => {
+        try {
+          await logAsync("這個訊息會在1秒之後出現", 1000);
+          await logAsync("這個訊息會在2秒之後出現", 2000);
+          await logAsync("這個訊息會在1.5秒之後出現", 1500);
+        } catch (error) {
+          console.log(error);
+        }
+      };
+
+      demo();
+    </script>
+  </body>
+</html>
