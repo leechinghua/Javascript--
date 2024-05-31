@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>location</title>
+  </head>
+  <body>
+    <button id="go">go</button>
+    <script>
+      const go = document.querySelector("#go");
+      go.addEventListener("click", function () {
+        location.href = "https://www.google.com";
+      });
+
+      setTimeout(function () {
+        location.href = "https://www.google.com";
+      }, 5000);
+    </script>
+  </body>
+</html>
