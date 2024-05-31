@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 動態匯入模組
+      import("./myModule.js")
+        .then((module) => {
+          module.greet();
+        })
+        .catch((err) => console.error("Module loading failed: " + err));
+    </script>
+  </body>
+</html>
