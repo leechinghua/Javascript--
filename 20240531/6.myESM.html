@@ -7,11 +7,16 @@
   </head>
   <body>
     <script type="module">
-      import { add, cross, subtract, greet } from "./mathFunction.js";
+      import { add, cross, subtract, greet } from "./mathFunctions.js";
+      import app from "./myComponent.js";
       console.log(add(2, 3));
       console.log(cross(5, 8));
       console.log(subtract(5, 8));
-      console.log(greet('May'));
+      console.log(greet("May"));
+
+      console.log(app.str);
+      console.log(app.array);
+      app.fn();
     </script>
   </body>
 </html>
